@@ -1,0 +1,177 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.encryption-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.encryption-in-out {
+  display: flex;
+  gap: 55px;
+}
+
+.encryption-input {
+  display: flex;
+}
+
+.encryption-output {}
+
+.encryption-area textarea {
+  width: 40vw;
+  height: 200px;
+  padding: 15px;
+}
+
+.btn-encrypt {
+  width: 200px;
+  height: 48px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-encrypt:hover {
+  background-color: #d10707;
+  color: white;
+  border: none;
+}
+
+.btn-encrypt .text,
+.btn-encrypt .icon {
+  position: absolute;
+  transition: opacity 0.8s ease;
+}
+
+.btn-encrypt .text {
+  opacity: 1;
+}
+
+.btn-encrypt .icon {
+  font-size: 36px;
+  opacity: 0;
+}
+
+.btn-encrypt:hover .text {
+  opacity: 0;
+}
+
+.btn-encrypt:hover .icon {
+  margin-top: 7px;
+  opacity: 1;
+}
+
+.decryption-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.decryption-in-out {
+  display: flex;
+  gap: 20px;
+}
+
+.decryption-input {
+  display: flex;
+}
+
+.decryption-output {}
+
+.decryption-area textarea {
+  width: 40vw;
+  height: 200px;
+  padding: 15px;
+}
+
+.btn-decrypt {
+  width: 200px;
+  height: 48px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-decrypt:hover {
+  background-color: #01ac0f;
+  color: white;
+  border: none;
+}
+
+.btn-decrypt .text,
+.btn-decrypt .icon {
+  position: absolute;
+  transition: opacity 0.8s ease;
+}
+
+.btn-decrypt .text {
+  opacity: 1;
+}
+
+.btn-decrypt .icon {
+  font-size: 36px;
+  opacity: 0;
+}
+
+.btn-decrypt:hover .text {
+  opacity: 0;
+}
+
+.btn-decrypt:hover .icon {
+  margin-top: 7px;
+  opacity: 1;
+}
+
+.encryption-input-box {
+  position: relative;          
+  width: 40vw;                  
+}
+
+.encryption-input-box > textarea {
+  width: 100%;                
+  height: 200px;
+  padding: 15px;
+  resize: none;
+}
+
+.flying-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: monospace;
+  padding: 15px;
+  white-space: pre-wrap;
+}
+
+.fly-char {
+  display: inline-block;
+  will-change: transform, opacity, filter;
+  transition: opacity 0.25s linear;
+}
+
+.fly-char.fly {
+  animation: flyout 0.6s ease forwards;
+}
+
+@keyframes flyout {
+  to {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rot));
+    opacity: 0;
+    filter: blur(2px);
+  }
+}
